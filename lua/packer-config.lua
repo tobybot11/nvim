@@ -11,12 +11,24 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-  augroup end
-]])
+-- vim.cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost packer-config.lua source <afile> | PackerSync
+--   augroup end
+-- ]])
+
+local packer_group = vim.api.nvim_create_augroup("Packer", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+	group = packer_group,
+	-- pattern = vim.fn.expand '$MYVIMRC',
+	-- pattern = vim.fn.expand("$XDG_CONFIG_HOME") .. "/nvim/lua/packer.lua",
+	-- pattern = vim.fn.expand("$XDG_CONFIG_HOME") .. "/nvim/lua/packer-config.lua",
+	-- pattern = { "packer-config.lua" },
+	pattern = "packer-config.lua",
+	-- command = "source <afile> | silent! LspStop | silent! LspStart | PackerSync",
+	command = "source <afile> | PackerSync",
+})
 
 local status, packer = pcall(require, "packer")
 if not status then

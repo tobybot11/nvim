@@ -1,10 +1,12 @@
-require("tobybot11.plugins-setup")
+-- require("tobybot11.plugins-setup")
+require("packer-config")
 
 require("tobybot11.core.options")
 require("tobybot11.core.colorscheme")
 require("tobybot11.core.keymaps")
 
 require("tobybot11.plugins.autopairs")
+-- require("plugins.autopairs")
 require("tobybot11.plugins.comment")
 require("tobybot11.plugins.gitsigns")
 require("tobybot11.plugins.hlargs")
