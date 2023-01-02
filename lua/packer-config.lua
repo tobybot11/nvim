@@ -82,8 +82,21 @@ return require("packer").startup(function(use)
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 
-	-- configuring lsp servers
-	use("neovim/nvim-lspconfig")
+	use({ -- LSP configuration & plugins
+		"neovim/nvim-lspconfig",
+		requires = {
+			-- Automatically install LSPs to stdpath for neovim
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+
+			-- Useful status updates for LSP
+			"j-hui/fidget.nvim",
+
+			-- Additional lua configuration, makes nvim stuff amazing
+			"folke/neodev.nvim",
+		},
+	})
+
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
@@ -100,10 +113,21 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	use({ -- Additional text objects via treesitter
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		after = "nvim-treesitter",
+	})
+
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
+	-- Git related plugins
+	use("tpope/vim-fugitive")
+	use("tpope/vim-rhubarb")
 	use("lewis6991/gitsigns.nvim")
+
+	use("lukas-reineke/indent-blankline.nvim") -- Add indentation guides even on blank lines
+	use("tpope/vim-sleuth") -- Detect tabstop and shiftwidth automatically
 
 	use({
 		"folke/trouble.nvim",
