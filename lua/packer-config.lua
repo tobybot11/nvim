@@ -100,7 +100,9 @@ return require("packer").startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
-	use("simrat39/rust-tools.nvim")
+	-- use("simrat39/rust-tools.nvim")
+	-- fork with inlay fix issue
+	use("mattfbacon/rust-tools.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
