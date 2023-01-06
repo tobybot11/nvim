@@ -7,6 +7,7 @@ require("core.keymaps")
 
 require("plugins.autopairs")
 -- require("plugins.autopairs")
+require("plugins.cmp-dictionary")
 require("plugins.comment")
 require("plugins.fidget")
 require("plugins.gitsigns")

@@ -151,6 +151,8 @@ return require("packer").startup(function(use)
 	use("mhinz/vim-startify")
 	use("m-demare/hlargs.nvim")
 
+	use("uga-rosa/cmp-dictionary")
+
 	-- use({
 	-- 	"kosayoda/nvim-lightbulb",
 	-- 	requires = "antoinemadec/FixCursorHold.nvim",
