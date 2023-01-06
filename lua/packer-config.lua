@@ -151,6 +151,15 @@ return require("packer").startup(function(use)
 	use("mhinz/vim-startify")
 	use("m-demare/hlargs.nvim")
 
+	use("uga-rosa/cmp-dictionary")
+	use("norcalli/nvim-colorizer.lua")
+	use("abecodes/tabout.nvim")
+
+	-- use({
+	-- 	"kosayoda/nvim-lightbulb",
+	-- 	requires = "antoinemadec/FixCursorHold.nvim",
+	-- })
+	--
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

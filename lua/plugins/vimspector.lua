@@ -3,7 +3,7 @@ if not status then
 	return
 end
 
-vimspector.setup()
+-- vimspector.setup()
 
 -- Vimspector options
 vim.cmd([[
