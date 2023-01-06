@@ -152,6 +152,8 @@ return require("packer").startup(function(use)
 	use("m-demare/hlargs.nvim")
 
 	use("uga-rosa/cmp-dictionary")
+	use("norcalli/nvim-colorizer.lua")
+	use("abecodes/tabout.nvim")
 
 	-- use({
 	-- 	"kosayoda/nvim-lightbulb",
