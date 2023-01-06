@@ -160,6 +160,25 @@ return require("packer").startup(function(use)
 	-- 	requires = "antoinemadec/FixCursorHold.nvim",
 	-- })
 	--
+	-- use("terror/chatgpt.nvim")
+	--
+	-- use({
+	-- 	"jackMort/ChatGPT.nvim",
+	-- 	config = function()
+	-- 		require("chatgpt").setup({
+	-- 			-- optional configuration
+	-- 		})
+	-- 	end,
+	-- 	requires = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- })
+
+	use("github/copilot.vim")
+	-- use("simrat39/inlay-hints.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
