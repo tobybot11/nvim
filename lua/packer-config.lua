@@ -178,6 +178,8 @@ return require("packer").startup(function(use)
 
 	use("github/copilot.vim")
 	-- use("simrat39/inlay-hints.nvim")
+	use("folke/which-key.nvim")
+	use("jamessan/vim-gnupg")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
