@@ -1,9 +1,8 @@
- 
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
--- use to exit insert mode 
+-- use to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
 -- clear search highlights
@@ -31,9 +30,8 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
-
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") 
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -42,6 +40,13 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- my vimspector keybinds
+keymap.set("n", "<leader>da", ":call vimspector#Launch()<cr>")
+keymap.set("n", "<leader>db", ":call vimspector#ToggleBreakpoint()<cr>")
+keymap.set("n", "<leader>dx", ":call vimspector#Reset()<cr>")
+keymap.set("n", "<leader>dr", ":call vimspector#Restart()<cr>")
+keymap.set("n", "<leader>di", ":call vimspector#StepInto()<cr>")
+keymap.set("n", "<leader>do", ":call vimspector#StepOver()<cr>")
+keymap.set("n", "<leader>de", ":call vimspector#Eval()<cr>")
 
-
--- 
+--

@@ -23,6 +23,7 @@ require("plugins.tabout")
 require("plugins.telescope")
 require("plugins.treesitter")
 require("plugins.vimspector")
+require("plugins.which-key")
 
 require("plugins.lsp.mason")
 require("plugins.lsp.lspsaga")
