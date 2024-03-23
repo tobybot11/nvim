@@ -1,7 +1,18 @@
-
 local setup, comment = pcall(require, "Comment")
 if not setup then
-  return
+	return
 end
 
-comment.setup()
+comment.setup({
+	padding = true,
+	sticky = true,
+	extra = {
+		above = "gcO",
+		below = "gco",
+		eol = "gcA",
+	},
+	mappings = {
+		basic = true,
+		extra = true,
+	},
+})

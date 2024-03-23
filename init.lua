@@ -6,7 +6,7 @@ require("core.colorscheme")
 require("core.keymaps")
 
 require("plugins.autopairs")
--- require("plugins.autopairs")
+require("plugins.bluloco")
 require("plugins.cmp-dictionary")
 require("plugins.colorizer")
 require("plugins.comment")
