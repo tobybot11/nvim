@@ -102,7 +102,8 @@ return require("packer").startup(function(use)
 	use("onsails/lspkind.nvim")
 	-- use("simrat39/rust-tools.nvim")
 	-- fork with inlay fix issue
-	use("mattfbacon/rust-tools.nvim")
+	-- use("mattfbacon/rust-tools.nvim")
+	-- use("jimzk/rust-tools.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
@@ -180,6 +181,13 @@ return require("packer").startup(function(use)
 	-- use("simrat39/inlay-hints.nvim")
 	use("folke/which-key.nvim")
 	use("jamessan/vim-gnupg")
+	use("davidgranstrom/nvim-markdown-preview")
+
+	use({
+		"uloco/bluloco.nvim",
+		branch = "main",
+		requires = { "rktjmp/lush.nvim" },
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
