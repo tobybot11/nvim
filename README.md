@@ -13,9 +13,9 @@ This helped me to understand lua and neovim much better but I wasn't happy with 
 
 Cleaned up the tree more to my liking and added some plugins and tweask from kickstart.nvim that i liked better
 
-## github repo [tobybot11/nvim](https://github.com/tobybot11/nvim)
+## github repo [tobybot11/nvim](https://github.com/tobybot11/nvim) - uses ssh auth
 
-## managing the setup
+## managing the setup on regular basis
 
 ```neovim
 :PackerUpdate
